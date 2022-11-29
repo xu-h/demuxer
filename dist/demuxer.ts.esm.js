@@ -1337,7 +1337,7 @@ const SDT_PID = 0x0011;
 //     service_name: string;
 //     service_provider: string;
 // }
-class PSI$1 {
+class PSI {
     constructor() {
         // this.metadata = new Metadata();
         this.pat_table = [];
@@ -3464,7 +3464,7 @@ class TSDemux extends DemuxFacade {
     complexStream_;
     constructor(options = {}) {
         super(options);
-        this.psi_ = new PSI$1();
+        this.psi_ = new PSI();
         this.pesStream_ = new PesStream(this.ctx_, this.psi_);
         this.elementaryStream_ = new ElementaryStream(this.ctx_, this.psi_, options);
         this.complexStream_ = new M2TSComplexStream(this.ctx_, this.psi_);

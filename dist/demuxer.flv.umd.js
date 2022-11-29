@@ -1,14 +1,15 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (global = global || self, factory(global.Demuxer = {}));
-}(this, (function (exports) { 'use strict';
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.Demuxer = {}));
+})(this, (function (exports) { 'use strict';
 
     /**
      * @file= events.js, created at Monday, 23rd December 2019 3=47=23 pm
      * @copyright Copyright (c) 2020
      * @author gem <gems.xu@gmail.com>
      */
+    exports.Events = void 0;
     (function (Events) {
         Events["ERROR"] = "ERROR";
         Events["INFO"] = "INFO";
@@ -2838,4 +2839,4 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));

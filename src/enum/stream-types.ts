@@ -43,6 +43,7 @@ Value       Description
 export const enum StreamTypes {
     H264 = 0x1b,
     HEVC = 0x24,
+    AVS3 = 0xd4,
     ADTS = 0x0f,
     METADATA = 0x15
 }

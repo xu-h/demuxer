@@ -7,6 +7,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @copyright Copyright (c) 2020
  * @author gem <gems.xu@gmail.com>
  */
+exports.Events = void 0;
 (function (Events) {
     Events["ERROR"] = "ERROR";
     Events["INFO"] = "INFO";
@@ -1340,7 +1341,7 @@ const SDT_PID = 0x0011;
 //     service_name: string;
 //     service_provider: string;
 // }
-class PSI$1 {
+class PSI {
     constructor() {
         // this.metadata = new Metadata();
         this.pat_table = [];
@@ -3467,7 +3468,7 @@ class TSDemux extends DemuxFacade {
     complexStream_;
     constructor(options = {}) {
         super(options);
-        this.psi_ = new PSI$1();
+        this.psi_ = new PSI();
         this.pesStream_ = new PesStream(this.ctx_, this.psi_);
         this.elementaryStream_ = new ElementaryStream(this.ctx_, this.psi_, options);
         this.complexStream_ = new M2TSComplexStream(this.ctx_, this.psi_);
@@ -3620,7 +3621,7 @@ parse = {
         };
     },
     esds: function (data) {
-        let view = new DataView(data.buffer, data.byteOffset, data.byteLength);
+        new DataView(data.buffer, data.byteOffset, data.byteLength);
         return {
             version: data[0],
             flags: new Uint8Array(data.subarray(1, 4)),

@@ -7,6 +7,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @copyright Copyright (c) 2020
  * @author gem <gems.xu@gmail.com>
  */
+exports.Events = void 0;
 (function (Events) {
     Events["ERROR"] = "ERROR";
     Events["INFO"] = "INFO";
